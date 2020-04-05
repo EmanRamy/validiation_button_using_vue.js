@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>validation button for a simple form</title>
+    <link rel="stylesheet" href="css/index.css">
+  </head>
+  <body>
+<div id="myapp" class="container">
+  <form action="">
+    <input type="text" placeholder="enter your name" v-model="name">
+    <input type="number" placeholder="enter your phone number" v-model="phone">
+    <input type="email" placeholder="enter your email" v-model="email">
+    <button :disabled="!name || !email || !phone">send data</button>
+
+  </form>
+</div>
+
+
+
+<script src="js/vue.js"></script>
+<script>
+  var app= new Vue({
+    el:"#myapp",
+    data:{
+      name:null,
+      email:null,
+      phone:null,
+
+    },
+    methods:{
+
+    }
+
+  });
+
+</script>
+  </body>
+</html>
